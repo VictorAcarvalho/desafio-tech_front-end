@@ -1,0 +1,14 @@
+header{
+    color:var(--white-color-text);
+    background-color: var(--header-background);
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+header img{
+    width: 8rem;
+    margin-left: 2rem;
+}
