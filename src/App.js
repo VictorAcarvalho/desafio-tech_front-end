@@ -1,16 +1,12 @@
 import React from 'react';
 import './App.css';
-import Title from './components/title/index';
+import Header from './components/header/Header';
 
 function App() {
   return (
-    
-      <Title 
-      text="Desafio Calindra"
-      />
-        
-      
-    
+  
+      < Header />
+       
     );
 }
 

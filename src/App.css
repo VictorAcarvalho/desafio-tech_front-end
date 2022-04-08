@@ -7,10 +7,15 @@
 :root{
   /*Trativa para colocar o 1 rem como 10px*/
   font-size: 62.5%;
+  --background-color:#F1F3F9;
+  --button-hover:#cbc7c5;
+  --white-color-text:#F8F9FC;
+  --black-color-text:#0b090a;
+  --header-background:#1D1E20;
 }
 
 body{
-  font-family: sans-serif;
+  font-family: sans-serif,cursive;
 }
 
 
