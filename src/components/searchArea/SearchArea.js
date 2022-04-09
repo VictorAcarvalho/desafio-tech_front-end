@@ -1,9 +1,9 @@
 import React,{useState} from "react";
 import Swal from "sweetalert2";
-import handleProductSearch from "../../services/api"
-import Title from "../title/Title";
-
-function SearchBar(){
+import handleProductSearch from "../../services/api";
+import style from './SearchArea.module.css';
+import box from '../../assets/box.svg';
+function SearchArea(){
     const [search,setSearch] = useState('');
     const [list,setList] = useState([]);
 
@@ -29,21 +29,27 @@ function SearchBar(){
 
 
     return(
-        <>
+        <div className={style.container}>
+          <div className={style.rowWrapper}>
           <input type="text" placeholder="busque por um produto" onChange={handleInputSearch} value={search} />
           <button onClick={()=>searchProducts(search)} type="submit" >Buscar</button>
-          <ul>
+          </div>  
+          <ul className={style.listContainer}>
             {list.map((item)=>
-              <>
-              <p>{item.name}</p>
-              <p>{item._meta.visitsClickCount}</p>
-              </>
-              
+              <div className={style.itemCard}>
+                <img src={box} alt="imagem do produto" className={style.itemImage}/>
+                <p className={style.itemTitle}>
+                  {item.name}
+                </p>
+                <p>Visto: {item._meta.visitsClickCount} vezes</p>
+              </div>
               )}
           </ul>
-        </>
-    )
 
-}
+        </div>
+      
+    );
 
-export default SearchBar;
+};
+
+export default SearchArea;
