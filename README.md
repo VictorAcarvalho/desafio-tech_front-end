@@ -9,3 +9,5 @@
 - Depois, clone o projeto e, em seguida, abra-o e digite no terminal: `npm i`
 
 - Após a instalação, utilize `npm run start`  para rodar o projeto.
+
+[Link do projeto](https://desafio-tech-front-end.vercel.app)
